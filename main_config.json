@@ -1,0 +1,34 @@
+{
+    "project-description": "автоматизированная насосная станция для ОАО СОЮЗ-Энерго",
+    "date": "15.04.2021",
+    "devices": [
+        {
+            "device-id": "upp-motor-1",
+            "type": "upp_ve",
+            "version": "v1.01",
+            "description": "Основное УПП на 4кв для запуска качалки",
+            "connection": "upp_motor_1_connection.json",
+            "model": "upp_ve_1_01_model.json",
+            "default-web-interface": "upp_ve_index.html"
+        },
+        {
+            "device-id": "upp-motor-reserve",
+            "type": "upp_ve",
+            "version": "v1.01",
+            "description": "Резервное УПП на 4кв для запуска качалки",
+            "connection": "upp_motor_reserve_connection.json",
+            "model": "upp_ve_1_01_model.json",
+            "default-web-interface": "upp_ve_index.html"
+        }
+    ],
+    "layouts": {
+        "web": "web_layout.json",
+        "desktop_v1": "desktop_v1_layout.json",
+        "desktop_v2": "desktop_v1_layout.json",
+        "android": "android_layout.json"
+    },
+    "archive": {
+        "URI": "postgres://USERNAME:PASSWORD@babar.elephantsql.com:5432/jszlmeae",
+        "archive_schema": "archive_schema.json"
+    }
+}
